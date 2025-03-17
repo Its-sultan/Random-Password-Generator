@@ -1,0 +1,196 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animated Gradient Background */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2c3e50, #8e44ad);
+  animation: gradientBG 10s infinite alternate ease-in-out;
+}
+
+/* Background Effect */
+.background {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  /* border-radius: 1px; */
+  /* border-radius: 50% 80% / 47% 10%; */
+border-radius: 90px 20px / 9px 20px;
+  padding: 40px 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Cool Hover Effect */
+.background:hover {
+  transform: scale(1.03);
+}
+
+/* Container */
+.container {
+  color: #fff;
+  max-width: 400px;
+  animation: slideUp 1s ease-out;
+}
+
+/* Title */
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInText 2s ease-out;
+}
+
+/* Input Field */
+input {
+  width: 65%;
+  padding: 12px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Input Focus */
+input:focus {
+  outline: none;
+  border-color: #00c3ff;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Buttons */
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow Effect on Hover */
+.generate-btn, .copy-btn {
+  position: relative;
+  z-index: 1;
+}
+
+.generate-btn:hover::after, .copy-btn:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  border-radius: 8px;
+}
+
+/* Generate Button */
+.generate-btn {
+  background: linear-gradient(45deg, #3498db, #1abc9c);
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+}
+
+.generate-btn:hover {
+  background: linear-gradient(45deg, #1abc9c, #3498db);
+  box-shadow: 0 0 20px rgba(52, 152, 219, 0.9);
+}
+
+/* Copy Button */
+.copy-btn {
+  background: linear-gradient(45deg, #8e44ad, #e84393);
+  box-shadow: 0 0 15px rgba(142, 68, 173, 0.6);
+}
+
+.copy-btn:hover {
+  background: linear-gradient(45deg, #e84393, #8e44ad);
+  box-shadow: 0 0 20px rgba(142, 68, 173, 0.9);
+}
+
+/* Message */
+#message {
+  margin-top: 10px;
+  color: #00ff6a;
+  font-size: 14px;
+  opacity: 0;
+  animation: fadeInMessage 2s forwards;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInMessage {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes gradientBG {
+  0% { background: linear-gradient(135deg, #2c3e50, #8e44ad); }
+  100% { background: linear-gradient(135deg, #3478db, #e84393); }
+}
+
+/* Developer Text */ 
+#developerText {
+  font-size: 15px;
+  font-weight: bold;
+  /* font-family: 'Arial', sans-serif; */
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(7, 3, 3, 0.831);
+  margin-top: 0px; /* Creates space below the container */
+  padding-top: 23px;
+  padding-bottom: 10px;
+  animation: fadeInText 2s ease-in-out;
+}
+
+/* Animation for Fade In Effect */
+@keyframes fadeInText {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
